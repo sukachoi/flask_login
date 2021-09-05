@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>파크타운</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>환영합니다!!!</h1>
+
+
+<form action="/adm_cost" method="GET">
+    <input type = "text"  value="동 입력" name = "dong"></br><!--입력#value는 입력받는 변수, name은 변수명, id는 그 변수명의 내가 지은 별명-->
+    <input type = "text"  value="호 입력" name = "ho"></br>
+    <input type = "text"  value="금액 입력" name = "cost"></br>    
+    <input type = "text"  value="이름 입력" name = "pay_nm">
+    <input type="submit" value = "입력"><!--버튼--></br>
+</form>
+
+
+</br></br></br>
+<form action="/Park_apt" method="GET">
+    시작날짜<input type = "text"  value="" name = "strt_dt"></br>   
+    끝 날짜<input type = "text"  value="" name = "end_dt"></br>   
+    <input type="submit" value = "입금내역조회"><!--버튼--></br>     
+</form>
+
+<body>
+    <table border="1">
+        <caption>표제목</caption>
+        <tr>
+            <th>동</th>
+            <th>호</th>
+            <th>금액</th>
+            <th>이름</th>
+            <th>날짜</th>
+        </tr>
+        <tr>
+            <th>{{datas[0].dong}}</th>
+            <th>{{datas[0].ho}}</th>
+            <th>{{datas[0].cost}}</th>
+            <th>{{datas[0].pay_nm}}</th>
+            <th>{{datas[0].pay_dt}}</th>
+        </tr>
+        <tr>
+            <th>{{datas[1].dong}}</th>
+            <th>{{datas[1].ho}}</th>
+            <th>{{datas[1].cost}}</th>
+            <th>{{datas[1].pay_nm}}</th>
+            <th>{{datas[1].pay_dt}}</th>
+        </tr>
+        <tr>
+            <th>{{datas[2].dong}}</th>
+            <th>{{datas[2].ho}}</th>
+            <th>{{datas[2].cost}}</th>
+            <th>{{datas[2].pay_nm}}</th>
+            <th>{{datas[2].pay_dt}}</th>
+        </tr>
+        <tr>
+            <th>{{datas[3].dong}}</th>
+            <th>{{datas[3].ho}}</th>
+            <th>{{datas[3].cost}}</th>
+            <th>{{datas[3].pay_nm}}</th>
+            <th>{{datas[3].pay_dt}}</th>
+        </tr>
+        <tr>
+            <th>{{datas[4].dong}}</th>
+            <th>{{datas[4].ho}}</th>
+            <th>{{datas[4].cost}}</th>
+            <th>{{datas[4].pay_nm}}</th>
+            <th>{{datas[4].pay_dt}}</th>
+        </tr>
+    </table>
+
+
+
+</html>

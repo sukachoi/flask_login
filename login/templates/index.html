@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>파크타운</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>파크타운아파트</h1>
+ 
+    <form action="/login" method="POST">
+        <input type = "text"  value="ID" name = "id"></br><!--입력-->
+        <input type = "text"  value="PW" name = "pw">
+        <input type="submit" value = "로그인"></br><!--버튼-->
+    </form>
+
+    {{login_fail}}
+
+    <form action="/adm_login" method="GET">
+        <input type = "text"  value="ID" name = "id"></br><!--입력-->
+        <input type = "text"  value="PW" name = "pw">
+        <input type="submit" value = "관리자로그인"></br><!--버튼-->
+    </form>
+
+    <form action="/new_member" method="GET">
+        <input type="submit" value = "회원가입"></br><!--버튼-->
+    </form>
+    
+세션과 쿠키

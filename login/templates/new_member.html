@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PARKTOWN APT</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+</body>
+
+<form action="/id_check" method="GET">
+    <input type = "text"  value="id입력" name = "check_id"><!--입력-->
+    <input type="submit" value = "중복확인"></br><!--버튼-->
+</form>
+
+{{data}}
+
+<form action="/new_member" method="GET">
+    <input type = "text"  value="id입력" name = "id"></br><!--입력#value는 입력받는 변수, name은 변수명, id는 그 변수명의 내가 지은 별명-->
+    <input type = "text"  value="pw입력" name = "pw"></br>
+    <input type = "text"  value="동 입력" name = "dong"></br>
+    <input type = "text"  value="호 입력" name = "ho">
+    <input type="submit" value = "회원가입"><!--버튼--></br>
+         
+</form>
+
+{{result}}
+</html>
